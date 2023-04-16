@@ -1,0 +1,13 @@
+#csv to sql
+import pandas as pd 
+import sqlite3 as sq
+print("Ashwini Pradeep ,25") 
+filename = 'students.csv'
+data = pd.read_csv(filename) 
+print(data) 
+pdata = data 
+odata= pdata 
+b = 'student.db'
+stable = 'stud'
+conn = sq.connect(b) 
+odata.to_sql(stable,conn,if_exists ='replace')
